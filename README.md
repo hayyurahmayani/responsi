@@ -7,9 +7,13 @@ Produk Responsi
 
 
 
+
+
 >**Komponen Pembangun**
 
 >Komponen pembangun yang digunakan ialah GeoServer, Database, Library JavaScript & CSS dari Bootstrap dan Apexchart, serta LeafletJS (Peta dan Plugin)
+
+
 
 
 
@@ -27,8 +31,14 @@ Produk Responsi
 4.[Erupsi](https://magma.vsi.esdm.go.id/)
 
 
+
+
 >**Link Tampilan Website**
+
 Link: https://youtu.be/14lcGUW1pU8?si=lMHgtmC5DdnTqOCO 
+
+
+
 
 >**Tangkapan Layar Komponen**
 >![cover1](image/1.png)
@@ -41,6 +51,7 @@ Link: https://youtu.be/14lcGUW1pU8?si=lMHgtmC5DdnTqOCO
 >![erupsi](image/8.png)
 >![modal](image/9.png)
 >![grafik](image/10.png)
+
 
 
 >**Motivasi diri:** *Nothing is out of reach*
