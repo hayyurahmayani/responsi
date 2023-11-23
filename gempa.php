@@ -7,6 +7,13 @@
     <title>Earthquake</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
     <!-- Search CSS Library -->
     <link rel="stylesheet" href="assets/plugins/leaflet-search/leaflet-search.css" />
 
@@ -57,6 +64,15 @@
 <body>
     <div id="map"></div>
 
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>   
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
@@ -84,18 +100,84 @@
     <script src="assets/plugins/leaflet-routing/leaflet-routing-machine.js"></script>
     <script src="assets/plugins/leaflet-routing/leaflet-routing-machine.min.js"></script>
 
+    <!-- Bottombar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-bottom">
+    <a class="navbar-brand" href="cover.html"><b>📒 More Information</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#infoModal1">⛰️
+            Active Fault 1</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#infoModal2">⛰️
+            Active Fault 2</a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+    <!-- End of Bottombar -->
+
+    <!-- Modal Info 1-->
+    <div class="modal fade" id="infoModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header alert-info">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">⛰️ Active Fault 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                <div class="modal-body">
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                    <div class="p-3 mb-2 bg-danger text-white">Semangko Fault | Daerah Istimewa Aceh & Lampung</div>
+                        <p>a horizontal fault that extends along 1,900 kilometers on the western side of Sumatra Island with a Slip rate of 5 mm/year.</p>
+                    </div>
+                    <div class="p-3 mb-2 bg-danger text-white">Opak Fault | Daerah Istimewa Yogyakarta</div>
+                        <p>A vertical fault that extends from Wonosari highland to Yogyakarta with a Slip rate of 2.4 mm per year.</p>
+                    </div>
+                </div> 
+                </div>
+            </div>
+    </div>
+    <!-- End of Modal Info 1-->
+
+    <!-- Modal Info 2-->
+    <div class="modal fade" id="infoModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header alert-info">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">⛰️ Active Fault 2</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                <div class="modal-body">
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                    <div class="p-3 mb-2 bg-danger text-white">Sorong Fault | Papua</div>
+                        <p>A horizontal fault formed due to the collision of the Indo-Australian plate with the Pacific plate with a slip rate of 8.5 mm per year.</p>
+                    </div>
+                    <div class="p-3 mb-2 bg-danger text-white">Palu Koro Fault | Sulawesi Tengah</div>
+                        <p>A horizontal fault that cuts across Sulawesi Island from Palu Gulf to Bone Valley with a slip rate of 30 - 44 mm per year.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </div>
+    <!-- End of Modal Info 2-->
+
     <script>
         var wfsgeoserver1 = L.geoJson(null, {
 
             pointToLayer: function (feature, latlng) {
                 return L.marker(latlng, {
-                    /* icon: L.icon({
-                    iconUrl: "assets/marker/pin.png",
-                    iconSize: [32, 32],
-                    iconAnchor: [16, 32],
-                    popupAnchor: [0, -32],
-                    tooltipAnchor: [16, -20]
-                    }) */
+                    
                 });
             },
             onEachFeature: function (feature, layer) {
