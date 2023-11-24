@@ -49,7 +49,7 @@ Produk Responsi
 >![cover3](image/3.png)
 >![cover4](image/4.png)
 >![cover5](image/4(2).png)
->![dashboard1](image/5 (2).png)
+>![dashboard1](image/5(2).png)
 >![dashboard2](image/5.png)
 >![kering](image/6.png)
 >![gempa](image/7.png)
