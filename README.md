@@ -6,7 +6,7 @@ Produk Responsi
 
 >**DISIAR**
 
->Disaster in Indonesian Archipelago (Disiar) adalah sebuah sistem informasi geografis sederhana berbasis website yang menyediakan informasi terkait beberapa bencana alam dalam bentuk peta interaktif dan juga grafik menarik. Bencana yang ditampilkan ialah bencana alam seperti kekeringan, erupsi, dan juga gempa bumi.
+>Disaster in Indonesian Archipelago (DISIAR) adalah sebuah sistem informasi geografis sederhana berbasis website yang menyediakan informasi terkait beberapa bencana alam dalam bentuk peta interaktif dan juga grafik menarik. Bencana yang ditampilkan ialah bencana alam seperti kekeringan, erupsi, dan juga gempa bumi.
 
 
 
